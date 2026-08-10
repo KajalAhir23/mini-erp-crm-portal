@@ -4,6 +4,31 @@
 A small internal ERP/CRM system for a wholesale/distribution company — customers, products,
 stock, and sales challans — built as a full-stack case study.
 
+## Live Deployment
+
+| Item | Link |
+|---|---|
+| **Live Frontend** | https://mini-erp-crm-portal-six.vercel.app |
+| **Live Backend API** | https://mini-erp-crm-portal-fkir.onrender.com |
+| **Backend Health Check** | https://mini-erp-crm-portal-fkir.onrender.com/health |
+| **GitHub Repository** | https://github.com/KajalAhir23/mini-erp-crm-portal |
+| **Postman Collection** | [`postman_collection.json`](./postman_collection.json) (repo root) |
+
+### Test Login Credentials
+
+| Role      | Email                  | Password      |
+|-----------|--------------------------|---------------|
+| Admin     | admin@erpcrm.test       | Password123!  |
+| Sales     | sales@erpcrm.test       | Password123!  |
+| Warehouse | warehouse@erpcrm.test   | Password123!  |
+| Accounts  | accounts@erpcrm.test    | Password123!  |
+
+> Note: the backend is hosted on Render's free tier, which spins down after periods of
+> inactivity — the first request after idle time may take ~30-50 seconds to respond while it
+> wakes up.
+
+---
+
 **Stack:** Node.js + TypeScript + Express + Prisma + PostgreSQL (backend) · React + TypeScript + Vite (frontend)
 
 ---
@@ -201,5 +226,5 @@ returned token into the collection's `token` variable).
   were prioritized).
 - Pagination is offset-based (fine at this scale); a large production dataset would benefit from
   cursor-based pagination.
-=======
+
 # mini-erp-crm-portal
