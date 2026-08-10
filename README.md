@@ -1,3 +1,4 @@
+
 # Mini ERP + CRM Operations Portal
 
 A small internal ERP/CRM system for a wholesale/distribution company — customers, products,
@@ -200,3 +201,5 @@ returned token into the collection's `token` variable).
   were prioritized).
 - Pagination is offset-based (fine at this scale); a large production dataset would benefit from
   cursor-based pagination.
+=======
+# mini-erp-crm-portal
