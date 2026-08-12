@@ -33,7 +33,7 @@ stock, and sales challans — built as a full-stack case study.
 
 ---
 
-## 1. Project Structure
+## Project Structure
 
 ```
 erp-crm/
@@ -58,7 +58,7 @@ erp-crm/
 
 ---
 
-## 2. Architecture Overview
+## Architecture Overview
 
 - **Auth**: JWT-based. On login, the API returns a signed token containing `userId`, `role`,
   and `email`. The frontend stores it in `localStorage` and sends it as `Authorization: Bearer <token>`.
@@ -78,7 +78,7 @@ erp-crm/
 
 ---
 
-## 3. Local Setup
+## Local Setup
 
 ### Prerequisites
 - Node.js 18+
@@ -120,7 +120,7 @@ npm run dev      # starts UI on http://localhost:5173
 
 ---
 
-## 4. Environment Variables
+## Environment Variables
 
 **backend/.env**
 | Variable        | Description                                  |
@@ -140,7 +140,7 @@ Never commit real `.env` files — only `.env.example` is checked into git (see 
 
 ---
 
-## 5. Deployment Guide (free hosting, no AWS spend required)
+## Deployment Guide (free hosting, no AWS spend required)
 
 This satisfies the assignment's "if not deploying to AWS, deploy to any free host" option.
 AWS deployment is optional/bonus per the brief — the steps below use free tiers instead.
@@ -169,7 +169,7 @@ Railway or Fly.io work the same way if you prefer those.
 
 ---
 
-## 6. API Overview
+## API Overview
 
 All endpoints except `/auth/login` require `Authorization: Bearer <token>`.
 
@@ -200,7 +200,7 @@ returned token into the collection's `token` variable).
 
 ---
 
-## 7. Assumptions Made
+## Assumptions Made
 
 - One challan confirmation reduces stock for all its line items atomically — if any single
   item has insufficient stock, the entire challan creation/confirmation is rejected (no partial
@@ -213,7 +213,7 @@ returned token into the collection's `token` variable).
 - Challan numbers are generated sequentially per year (`CH-2026-000001`) rather than fully random,
   for readability on physical/printed challans.
 
-## 8. Known Limitations
+## Known Limitations
 
 - No PDF export of challans (listed as a bonus in the brief — not implemented).
 - No AWS S3 image upload (bonus — not implemented).
