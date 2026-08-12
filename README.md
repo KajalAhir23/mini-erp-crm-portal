@@ -145,12 +145,12 @@ Never commit real `.env` files — only `.env.example` is checked into git (see 
 This satisfies the assignment's "if not deploying to AWS, deploy to any free host" option.
 AWS deployment is optional/bonus per the brief — the steps below use free tiers instead.
 
-### Step 1 — Database (choose one)
+### Step 1 — Database
 - **Neon** (https://neon.tech) — free Postgres, easiest to set up. Create a project, copy the
   connection string into `DATABASE_URL`.
 - **Supabase** or **Render Postgres** work the same way.
 
-### Step 2 — Backend (Render, free tier)
+### Step 2 — Backend (Render)
 1. Push this repo to GitHub.
 2. On Render → New → Web Service → connect the repo, root directory `backend`.
 3. Build command: `npm install && npx prisma generate && npm run build`
@@ -161,16 +161,11 @@ AWS deployment is optional/bonus per the brief — the steps below use free tier
 
 Railway or Fly.io work the same way if you prefer those.
 
-### Step 3 — Frontend (Vercel or Netlify, free tier)
+### Step 3 — Frontend (Vercel)
 1. Import the repo, root directory `frontend`.
 2. Build command: `npm run build`, output directory: `dist`.
 3. Add environment variable `VITE_API_URL` = your Render backend URL.
 4. Deploy. Update the backend's `CORS_ORIGIN` to match the resulting frontend URL, then redeploy backend.
-
-### Step 4 (Bonus) — AWS
-If pursuing the AWS bonus: EC2 or Elastic Beanstalk for the backend (with an RDS Postgres
-instance), and S3 + CloudFront (or Amplify) for the static frontend build. Not required for
-this submission — documented here for completeness.
 
 ---
 
